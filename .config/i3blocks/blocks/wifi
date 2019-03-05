@@ -1,0 +1,9 @@
+#!/bin/bash
+
+case $BLOCK_BUTTON in
+esac
+
+connection="$(nmcli connection show | awk '/wlp4s0/ {print $1}')"
+[[ -z $connection ]] && printf "<span foreground=\"#FF0000\"> No Wifi</span>" && exit
+
+printf "<span foreground=\"#30af30\">  %s </span>" "$(nmcli connection show | awk '/wlp4s0/ {print $1}')"

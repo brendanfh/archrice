@@ -1,0 +1,19 @@
+#!/bin/bash
+
+case $BLOCK_BUTTON in
+	1) pamixer --toggle-mute ;;
+	3) pavucontrol ;;
+esac
+
+[ "$(pamixer --get-mute)" = "true" ] && printf "<span foreground=\"#FF0000\"></span>" && exit
+
+vol=$(pamixer --get-volume)
+
+icon=""
+if [ "$vol" -gt "70" ]; then
+	icon=""
+elif [ "$vol" -gt "30" ]; then
+	icon=""
+fi
+
+printf "<span foreground=\"#a0a0ff\"> %s %s </span>" $icon $vol

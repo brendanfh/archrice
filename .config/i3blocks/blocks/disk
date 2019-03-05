@@ -1,0 +1,8 @@
+#!/bin/bash
+
+case $BLOCK_BUTTON in
+	1) notify-send "Disk status: " \
+		"$(df -h)" ;;
+esac
+
+printf "<span foreground=\"#a0a0ff\"> %s %s </span>" "$2" "$(df -h $1 | awk '/[0-9]/ {print $3 " / " $2}')"
