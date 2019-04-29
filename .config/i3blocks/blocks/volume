@@ -1,11 +1,15 @@
 #!/bin/bash
 
+. ~/.cache/wal/colors.sh
+
 case $BLOCK_BUTTON in
 	1) pamixer --toggle-mute ;;
 	3) pavucontrol ;;
+	4) pactl set-sink-volume 0 +5% ;;
+	5) pactl set-sink-volume 0 -5% ;;
 esac
 
-[ "$(pamixer --get-mute)" = "true" ] && printf "<span foreground=\"#FF0000\"></span>" && exit
+[ "$(pamixer --get-mute)" = "true" ] && printf "\n\n#ff0000" && exit
 
 vol=$(pamixer --get-volume)
 
@@ -16,4 +20,6 @@ elif [ "$vol" -gt "30" ]; then
 	icon=""
 fi
 
-printf "<span foreground=\"#a0a0ff\"> %s %s </span>" $icon $vol
+printf "%s %s\n" $icon $vol
+printf "%s %s\n" $icon $vol
+printf "$color4\n"

@@ -4,4 +4,5 @@ case $BLOCK_BUTTON in
 	1) ~/.scripts/poweroptions ;;
 esac
 
-echo '<span foreground="#FF0000"> </span>'
+echo -e '\n'
+echo '#ff0000'

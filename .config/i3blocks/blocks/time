@@ -1,6 +1,9 @@
 #!/bin/bash
 
+. ~/.cache/wal/colors.sh
+
 case $BLOCK_BUTTON in
 esac
 
-printf "<span foreground=\"#a0a0ff\"> %s </span>" "$(date '+ %m-%d-%Y   %H:%M')"
+printf "%s\n\n" "$(date '+ %H:%M')"
+printf "$color4"

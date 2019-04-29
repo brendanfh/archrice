@@ -1,75 +1,76 @@
-#full_text=〈
-full_text=|
+command=~/.config/i3blocks/blocks/$BLOCK_NAME
+interval=once
 align=right
-color=#666666
-separator_block_width=7
+color=#003060
+separator_block_width=8
 separator=false
+
 markup=pango
 
-# [separator]
-
 [volume]
-command=~/.config/i3blocks/blocks/volume
 interval=2
 signal=10
 
 [separator]
 
 [brightness]
-command=~/.config/i3blocks/blocks/brightness
 interval=10
 signal=9
 
 [separator]
 
 [wifi]
-command=~/.config/i3blocks/blocks/wifi
 interval=5
+signal=1
 
 [separator]
 
 [memory]
-command=~/.config/i3blocks/blocks/memory
 interval=5
+signal=1
 
 [separator]
 
 [cpu]
-command=~/.config/i3blocks/blocks/cpu
 interval=5
+signal=1
 
 [separator]
 
 [disk]
 command=~/.config/i3blocks/blocks/disk "/dev/nvme0n1p1" 
-interval=30
+interval=300
+signal=1
 
 [separator]
 
 [battery]
 command=~/.config/i3blocks/blocks/battery "BAT0"
 interval=30
+signal=1
 
 [separator]
 
 [weather]
-full_text=
-command=~/.config/i3blocks/blocks/weather
 color=#ffffff
-interval=once
+interval=3600
 signal=5
 
 [separator]
 
+[calendar]
+interval=3600
+signal=1
+
+[separator]
+
 [time]
-command=~/.config/i3blocks/blocks/time
 interval=30
+signal=1
 
 [separator]
 
 [power]
-command=~/.config/i3blocks/blocks/power
-interval=once
-signal=6
 
 [separator]
+
