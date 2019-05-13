@@ -1,0 +1,2 @@
+#!/bin/sh
+feh --bg-fill '/home/brendan/Pictures/background/snow_covered_mountains.jpg' 

@@ -1,7 +1,23 @@
-execute pathogen#infect()
+set nocompatible
+filetype off
 
-syntax on
+set rtp+=~/.config/nvim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'VundleVim/Vundle.vim'
+
+Plugin 'scrooloose/nerdtree'
+Plugin 'w0rp/ale'
+Plugin 'kien/ctrlp.vim'
+Plugin 'vim-airline/vim-airline'
+Plugin 'tomasiser/vim-code-dark'
+Plugin 'ErichDonGubler/vim-sublime-monokai'
+Plugin 'floobits/floobits-neovim'
+Plugin 'edkolev/tmuxline.vim'
+
+call vundle#end()
+
 filetype plugin indent on
+syntax on
 
 set number
 set nowrap
@@ -21,8 +37,8 @@ set noerrorbells visualbell t_vb=
 let g:ctrlp_custom_ignore = 'node_modules'
 
 " colorscheme codedark
-" colorscheme sublimemonokai
-colorscheme monokai
+colorscheme sublimemonokai
+" colorscheme monokai
 
 " air-line
 let g:airline_powerline_fonts = 1
