@@ -1,0 +1,6 @@
+#!/bin/bash
+
+sname=$(ls -al ~/.scripts | awk '/^-rwx/ {print $9}' | dmenu -fn monospace:11 -h 32 -l 5 -p "Run which script?")
+[[ -z "$sname" ]] && exit 1
+
+~/.scripts/$sname

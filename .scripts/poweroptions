@@ -1,0 +1,10 @@
+#!/bin/bash
+
+choice="$(echo -e "Nothing\\nSuspend\\nPower off\\nReboot" | dmenu -h 32 -l 4 -i -fn Monospace:11 -p "What do you want to do?")"
+
+case $choice in
+	"Nothing") exit ;;
+	"Suspend") systemctl suspend ;;
+	"Power off") shutdown now ;;
+	"Reboot") systemctl reboot ;;
+esac
